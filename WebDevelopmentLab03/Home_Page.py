@@ -1,12 +1,27 @@
 import streamlit as st
-# Title of App
-st.markdown("""
-    <div style='text-align: center;'>
-        <h1>Welcome to RegenoTrak!</h1>
-        <h3>This multi-page clinical intelligence platform is designed to accelerate research in regenerative medicine. It automates the entire analytical workflow by fetching live trial data from the ClinicalTrials.gov API, generating dynamic visualizations, and utilizing the Gemini LLM to produce tailored, strategic reports and answer complex data queries in a contextual chatbot environment.</h3>
-        <h3>You will be able to find and analyze all cutting-edge interventions and treatments currently in clinical trials. This data includes the full spectrum of regenerative modalities, from advanced Cell and Gene Therapies to next-generation Tissue-Engineered Scaffolds and combination Drug/Device products.</h3>
+
+# The text content from your image
+text_content = """
+This multi-page clinical intelligence platform is designed to accelerate research in regenerative medicine. It automates the entire analytical workflow by fetching live trial data from the ClinicalTrials.gov API, generating dynamic visualizations, and utilizing the Gemini LLM to produce tailored, strategic reports and answer complex data queries in a contextual chatbot environment.
+
+You will be able to find and analyze all cutting-edge interventions and treatments currently in clinical trials. This data includes the full spectrum of regenerative modalities, from advanced Cell and Gene Therapies to next-generation Tissue-Engineered Scaffolds and combination Drug/Device products.
+"""
+
+# HTML/CSS to center the block and limit its width
+st.markdown(
+    f"""
+    <div style='
+        max-width: 600px; /* Adjust this value (e.g., 500px, 700px) to control block width */
+        margin-left: auto; /* Centers the block itself */
+        margin-right: auto; /* Centers the block itself */
+        text-align: center; /* Centers the text inside the block */
+        font-size: 1.1em; /* Optional: Slightly increase font size for better look */
+    '>
+    {text_content}
     </div>
-    """, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
 
 st.divider()
