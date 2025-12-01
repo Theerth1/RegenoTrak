@@ -23,8 +23,8 @@ st.markdown("""
 You can navigate between the pages using the sidebar to the left. The following pages are:
 
 1. <b>Clinical Trial Explorer and Visualizer</b>
-2. Trial Summaries for Clinical & Industry Use
-3. Chatbot for Further Insights on Selected Trials
+2. <b>Trial Summaries for Clinical & Industry Use</b>
+3. <b>Chatbot for Further Insights on Selected Trials</b>
 </div>
 """, unsafe_allow_html=True)
 
