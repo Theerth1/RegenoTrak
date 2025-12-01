@@ -3,8 +3,8 @@ import streamlit as st
 st.markdown("""
     <div style='text-align: center;'>
         <h1>Welcome to RegenoTrak!</h1>
-        <h3>This web application serves as a clinical trial explorer for regenerative medicines.</h3>
-        <h3>You will be able to find several different interventions/treatments that are currently being tested or used. These encompass medical devices, biologics, drugs, cell therapies, tissue-engineered constructs, behavioral interactions, procedures, and combination products.</h3>
+        <h3>This multi-page clinical intelligence platform is designed to accelerate research in regenerative medicine. It automates the entire analytical workflow by fetching live trial data from the ClinicalTrials.gov API, generating dynamic visualizations, and utilizing the Gemini LLM to produce tailored, strategic reports and answer complex data queries in a contextual chatbot environment.</h3>
+        <h3>You will be able to find and analyze all cutting-edge interventions and treatments currently in clinical trials. This data includes the full spectrum of regenerative modalities, from advanced Cell and Gene Therapies to next-generation Tissue-Engineered Scaffolds and combination Drug/Device products.</h3>
     </div>
     """, unsafe_allow_html=True)
 
@@ -18,12 +18,13 @@ st.divider()
 #       3. **Page Name**: Description
 #       4. **Page Name**: Description
 
-st.write("""
-Welcome to our Streamlit Web Development Lab03 app! You can navigate between the pages using the sidebar to the left. The following pages are:
+st.markdown("""
+<div style='font-size: 1.25rem;'>
+You can navigate between the pages using the sidebar to the left. The following pages are:
 
-1. Clinical Trial Explorer and Visualizer
+1. <b>Clinical Trial Explorer and Visualizer</b>
 2. Trial Summaries for Clinical & Industry Use
 3. Chatbot for Further Insights on Selected Trials
-
-""")
+</div>
+""", unsafe_allow_html=True)
 
