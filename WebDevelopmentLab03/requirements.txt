@@ -1,0 +1,8 @@
+streamlit
+google-generativeai
+requests
+pandas
+plotly.express
+tabulate
+numpy
+utils
