@@ -5,7 +5,7 @@ import streamlit as st
 st.markdown("""
     <div style='text-align: center;'>
         <h1>Welcome to RegenoTrak!</h1>
-        <h3>This multi-page clinical intelligence platform is designed to accelerate research in regenerative medicine. It automates the entire analytical workflow by fetching live trial data from the ClinicalTrials.gov API, generating dynamic visualizations, and utilizing the Gemini LLM to produce tailored, strategic reports and answer complex data queries in a contextual chatbot environment.</h3>
+        <h3>This novel multi-page clinical intelligence platform is designed to accelerate research in regenerative medicine. It automates the entire analytical workflow by fetching live trial data from the ClinicalTrials.gov API, generating dynamic visualizations, and utilizing the Gemini LLM to produce tailored, strategic reports and answer complex data queries in a contextual chatbot environment.</h3>
         <h3>You will be able to find and analyze all cutting-edge interventions and treatments currently in clinical trials. This data includes the full spectrum of regenerative modalities, from advanced Cell and Gene Therapies to next-generation Tissue-Engineered Scaffolds and combination Drug/Device products.</h3>
     </div>
     """, unsafe_allow_html=True)
