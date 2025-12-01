@@ -5,4 +5,3 @@ pandas
 plotly.express
 tabulate
 numpy
-utils
