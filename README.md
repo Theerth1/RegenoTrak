@@ -1,1 +1,3 @@
 Regenotrak is a multi-page, full-stack Streamlit application engineered to transform raw clinical trial data into actionable strategic intelligence for biomedical professionals and industry analysts. This platform integrates a live external API with a Google Gemini LLM to automate market analysis, feasibility assessment, and data querying in the regenerative medicine sector. It helps professionals visualize clinical trial data across trials of interest and provides clinician/industry related briefs that summarize these sets of trials. It also includes a built in chatbot for any additional user inquiry.
+
+link: https://regenotrak.streamlit.app/
