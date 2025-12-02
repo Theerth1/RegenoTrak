@@ -6,9 +6,10 @@
 #font = "sans serif"
 
 [theme]
-primaryColor = "#008080"
-backgroundColor = "#F2F8F9"
-secondaryBackgroundColor = "#D9EFF0"
-textColor = "#042D2D"
+primaryColor = "#3EE1D0"
+backgroundColor = "#0F1417"
+secondaryBackgroundColor = "#1B2429"
+textColor = "#E8F1F2"
 font = "sans serif"
+
 
