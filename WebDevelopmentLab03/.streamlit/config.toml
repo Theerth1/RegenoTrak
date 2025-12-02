@@ -6,10 +6,11 @@
 #font = "sans serif"
 
 [theme]
-primaryColor = "#6A5ACD"       # soft indigo
-backgroundColor = "#FAF9F7"    # warm off-white
-secondaryBackgroundColor = "#EFE7DD"
-textColor = "#1C1C1C"
+primaryColor = "#3EE1D0"
+backgroundColor = "#0F1417"
+secondaryBackgroundColor = "#1B2429"
+textColor = "#E8F1F2"
 font = "sans serif"
+
 
 
