@@ -1,7 +1,0 @@
-streamlit
-google-generativeai
-requests
-pandas
-plotly
-tabulate
-numpy
