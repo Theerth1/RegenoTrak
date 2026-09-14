@@ -110,13 +110,14 @@ if st.session_state['check']:
         extraInput = st.text_input("If you would like, you may make a specific, additional request to the Gemini LLM, pertaining to this set of fetched trials. If you would not like to, please leave this field blank.")
         Submitted3 = st.form_submit_button("Generate")
 
-KEY = 'AIzaSyAuPzZSeDc-D-d2t5lc_8Mvu97pKvoD1x8'
+KEY = st.secrets["GEMINI_API_KEY"]
 #at this point, queryLLM holds the wanted df adn choice holds the wanted type of report
 #--------------------------------------------------------------------------------------------------------------------------------------------------
 #need the tabulate module to flatten if incase df is None or tmpyy
 #need to pass in queryLLM for df and KEY for key, extraInput for ei, choice for choice
 #geminiCall finds gemini Model, creates datastring based on dataframe, selects proper prompt, and gives prompt to model, returnign the response
 def geminiCall(df, key, ei, choice, limit = 10000):
+    active_model = None
     if key:
         try:
             genai.configure(api_key=key)

@@ -24,8 +24,9 @@ if 'raw_df' not in st.session_state:
     st.session_state['raw_df'] = None
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
-KEY = 'AIzaSyBAjroC0rHYuQXIkbbOexYkhWcp7OM--2k'
+KEY = st.secrets["GEMINI_API_KEY"]
 #---------------------------------------------------------
+active_model = None
 try: #this gets active model
     genai.configure(api_key=KEY)
     # Find a model that supports generation, prefer Flash
@@ -61,25 +62,33 @@ if prompt := st.chat_input("Ask a question about this clinical trial data..."):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-full_prompt = f"""
-            You are a helpful Clinical Trial Analyst.
-            
-            CONTEXT DATA (The user is asking questions about this dataset):
-            {dataString}
-            
-            USER QUESTION:
-            {prompt}
-            
-            INSTRUCTIONS:
-            - Use the provided table to answer the question.
-            - If the answer is not in the table, state that you do not have that information.
-            - Keep answers concise and professional.
-            """
-            
-with st.chat_message("assistant"):
-    with st.spinner("Analyzing data..."):
-        response = active_model.generate_content(full_prompt)
-        ai_reply = response.text
-        st.markdown(ai_reply)
-st.session_state.messages.append({"role": "assistant", "content": ai_reply})
+    full_prompt = f"""
+                You are a helpful Clinical Trial Analyst.
+
+                CONTEXT DATA (The user is asking questions about this dataset):
+                {dataString}
+
+                USER QUESTION:
+                {prompt}
+
+                INSTRUCTIONS:
+                - Use the provided table to answer the question.
+                - If the answer is not in the table, state that you do not have that information.
+                - Keep answers concise and professional.
+                """
+
+    with st.chat_message("assistant"):
+        with st.spinner("Analyzing data..."):
+            if active_model is None:
+                ai_reply = "AI Connection Failed. Please check the Gemini API key and try again."
+                st.error(ai_reply)
+            else:
+                try:
+                    response = active_model.generate_content(full_prompt)
+                    ai_reply = response.text
+                    st.markdown(ai_reply)
+                except Exception as e:
+                    ai_reply = f"Error connecting to Gemini: {str(e)}"
+                    st.error(ai_reply)
+    st.session_state.messages.append({"role": "assistant", "content": ai_reply})
 
